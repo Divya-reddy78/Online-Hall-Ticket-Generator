@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vasavi</title>
+<style>
+   #firstdiv{
+      position: absolute;
+      top:0px;
+      left:0px;
+    
+      height: 100%;
+   }
+   #middle1{
+       position: absolute;
+       top:0px;
+       left:20%;
+   }
+   #lastdiv{
+       position: absolute;
+       top:0px;
+       right:0px;
+   }
+   #middle2{
+      position: absolute;
+      top:30%;
+      left:20%;
+   }
+   #middle3{
+      position: absolute;
+      top:90%;
+      left:20%;
+   }
+  a{
+  text-decoration: none;
+  color: white;}
+  .regisbutn{
+    position: absolute;
+      left:300px;
+ border: 1px solid black;
+ border-radius: 15%;
+ background-color:#2471A3;;
+ padding: 12px;
+ margin:8px;
+ color: whitesmoke;
+ width: 160px;
+
+ }
+ .login-form input[type="submit"] {
+				width: 100%;
+				padding: 15px;
+				background-color: #535b63;
+				border: 0;
+				box-sizing: border-box;
+				cursor: pointer;
+				font-weight: bold;
+				color: #ffffff;
+			}
+            .login-form input[type="number"],
+			.login-form input[type="file"] {
+				width: 100%;
+				padding: 15px;
+				border: 1px solid #dddddd;
+				margin-bottom: 15px;
+				box-sizing:border-box;
+			}
+            .login-form {
+				width: 300px;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+			.login-form h1 {
+				text-align: center;
+				color: #4d4d4d;
+				font-size: 24px;
+				padding: 20px 0 20px 0;
+			}
+</style>
+</head>
+<body>
+    <div style="width:20%;" id="firstdiv">
+    
+    </div>
+    <div style="width:60%;height:30%;" id="middle1">
+        <% include main.ejs%>
+    </div>
+    <div style="width:60%;height:40%;" id="middle2" name="middle2">
+        <div class="login-form">
+            <h1>Registration Form</h1>
+            <form action="auth4" method="POST" enctype="multipart/form-data">
+                <input type="file" name="sign" class="sign" id="sign" accept="image/*">
+                <input type="number" name="pay" placeholder="Payment" required>
+                <input type="submit" value="Next">
+            </form>
+        
+    </div>
+    </div>
+    <div style="width:60%;height:10%" id="middle3">
+        <% include copyright.ejs%>
+
+
+    </div>
+    <div style="width:20%;" id="lastdiv">
+    </div>
+</body>
+</html>
